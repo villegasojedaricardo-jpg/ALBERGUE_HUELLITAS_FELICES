@@ -1,0 +1,98 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net10.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="AportesEconomicos.rdlc" />
+	  <None Remove="Report1.rdlc" />
+	  <None Remove="REPORTEDONCACION.rdlc" />
+	  <None Remove="Vacunaciones.rdlc" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="REPORTEDONCACION.rdlc">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="AportesEconomicos.rdlc">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <EmbeddedResource Include="Report1.rdlc" />
+	  <EmbeddedResource Include="Vacunaciones.rdlc" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.1" />
+		<PackageReference Include="Microsoft.SqlServer.Types" Version="14.0.314.76" />
+		<PackageReference Include="PdfSharpCore" Version="1.3.67" />
+		<PackageReference Include="ReportViewerCore.WinForms" Version="15.1.33" />
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Huellitas_FelicesDataSet.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Huellitas_FelicesDataSet.xsd</DependentUpon>
+		</Compile>
+		<Compile Update="Huellitas_FelicesDataSet1.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>Huellitas_FelicesDataSet1.xsd</DependentUpon>
+		</Compile>
+		<Compile Update="Huellitas_FelicesDataSet2.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>Huellitas_FelicesDataSet2.xsd</DependentUpon>
+		</Compile>
+		<Compile Update="Huellitas_FelicesDataSet3.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>Huellitas_FelicesDataSet3.xsd</DependentUpon>
+		</Compile>
+		<Compile Update="Huellitas_FelicesDataSet4.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>Huellitas_FelicesDataSet4.xsd</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Huellitas_FelicesDataSet.xsd">
+			<Generator>MSDataSetGenerator</Generator>
+			<LastGenOutput>Huellitas_FelicesDataSet.Designer.cs</LastGenOutput>
+		</None>
+		<None Update="Huellitas_FelicesDataSet1.xsd">
+		  <Generator>MSDataSetGenerator</Generator>
+		  <LastGenOutput>Huellitas_FelicesDataSet1.Designer.cs</LastGenOutput>
+		</None>
+		<None Update="Huellitas_FelicesDataSet2.xsd">
+		  <Generator>MSDataSetGenerator</Generator>
+		  <LastGenOutput>Huellitas_FelicesDataSet2.Designer.cs</LastGenOutput>
+		</None>
+		<None Update="Huellitas_FelicesDataSet3.xsd">
+		  <Generator>MSDataSetGenerator</Generator>
+		  <LastGenOutput>Huellitas_FelicesDataSet3.Designer.cs</LastGenOutput>
+		</None>
+		<None Update="Huellitas_FelicesDataSet4.xsd">
+		  <Generator>MSDataSetGenerator</Generator>
+		  <LastGenOutput>Huellitas_FelicesDataSet4.Designer.cs</LastGenOutput>
+		</None>
+	</ItemGroup>
+</Project>
